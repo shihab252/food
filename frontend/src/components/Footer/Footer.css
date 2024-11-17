@@ -1,0 +1,144 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 8vw;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 60px; /* Reduced gap for cleaner design */
+    max-width: 1200px;
+    margin: 0 auto; /* Centering the grid content */
+}
+
+.footer-content-left, .footer-content-right, .footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Changed from center to flex-start for better alignment */
+    gap: 20px;
+}
+
+.footer-content-left li, .footer-content-right li, .footer-content-center li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #d9d9d9;
+    transition: color 0.3s ease;
+}
+
+.footer-content-left li:hover, .footer-content-right li:hover, .footer-content-center li:hover {
+    color:tomato; /* Hover effect to change color */
+}
+
+.footer-content-right h2, .footer-content-center h2, .footer-content-left h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons img {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Added filter transition */
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: invert(40%) sepia(50%) saturate(500%) hue-rotate(190deg) brightness(1.2); /* Blue effect */
+}
+
+
+.footer hr {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #555555; /* Darker color for a subtle divider */
+    border: none;
+}
+
+.footer-copyright {
+    color: #d9d9d9;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px 6vw; /* Reduce padding on large tablets */
+    }
+
+    .footer-content {
+        gap: 40px; /* Reduce gap */
+    }
+
+    .footer-content-left, .footer-content-right, .footer-content-center {
+        align-items: center; /* Center align on medium screens */
+    }
+
+    .footer-content-left p {
+        font-size: 14px;
+    }
+
+    .footer h2 {
+        font-size: 16px; /* Smaller headers */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 30px;
+    }
+
+    .footer-content-left, .footer-content-right, .footer-content-center {
+        align-items: center; /* Center align for mobile */
+    }
+
+    .footer-social-icons img {
+        width: 30px; /* Smaller social icons */
+    }
+
+    .footer h2 {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer hr {
+        height: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 4vw; /* Further reduce padding */
+    }
+
+    .footer h2 {
+        font-size: 12px;
+    }
+
+    .footer p, .footer li {
+        font-size: 10px; /* Smaller text for very small screens */
+    }
+
+    .footer-social-icons img {
+        width: 25px; /* Even smaller social icons */
+    }
+}

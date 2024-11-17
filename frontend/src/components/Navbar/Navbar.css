@@ -1,0 +1,147 @@
+/* Navbar General Styles */
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd; /* Clean white background */
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    color: #333;
+    font-size: 18px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar button {
+    background: tomato;
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    background-color: darkred;
+}
+
+/* Profile Dropdown Styles */
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.navbar-profile:hover img {
+    transform: scale(1.1);
+}
+
+.navprofile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.navprofile-dropdown.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navprofile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.navprofile-dropdown li:hover {
+    background-color: #f8f8f8;
+}
+
+.navprofile-dropdown li img {
+    width: 20px;
+    height: 20px;
+}
+
+.navprofile-dropdown li p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Dot Notification */
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 12px;
+    min-height: 12px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -6px;
+    right: -6px;
+    border: 2px solid white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navprofile-dropdown {
+        top: 40px;
+        right: 10px;
+    }
+}
