@@ -7,6 +7,7 @@ import userRouter from "./routes/userRoute.js"
 import "dotenv/config"
 
 
+
 //app config
 const app =express()
 const port = 4000
@@ -22,7 +23,8 @@ connectDB();
 //api endpoints
 app.use("/api/food",foodRouter);
 app.use("/images",express.static('uploades'));
-app.use("/api/user",userRouter)
+app.use("/api/user",userRouter);
+
 
 
 app.get("/",(req,res)=>{
